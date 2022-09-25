@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&family=Josefin+Sans:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300&family=Ubuntu:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Joan', serif;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    position:absolute;
+    clip-path: circle(30% at right 70%);
+    z-index: -1;
+}
+
+.contain{
+    width: 80%;
+    height: 80%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 25px;
+}
+
+.logo {
+    color: white;
+    font-size: 31px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-transform:uppercase;
+    cursor: pointer;
+    letter-spacing: 2.9px;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0px 15px;
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+
+ul li a:hover{
+    color: rgb(197, 59, 24);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.words{
+    color: white;
+    margin: 0px 10px;
+}
+
+h2{
+    font-size: 35px;
+    margin: 24px 0px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+p{
+    word-spacing: 1.8px;
+}
+
+img {
+    width: 500px;
+}
+
+
+@media (min-width:90px) and (max-width:1000px) {
+
+    body{
+        overflow-y: scroll;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        margin: 5px 0px;
+    }
+
+    ul li {
+        display: block;
+        margin: 10px 0px;
+    }
+
+
+    .contain{
+        height: 100vh;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
